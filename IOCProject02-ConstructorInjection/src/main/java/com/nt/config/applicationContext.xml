@@ -8,13 +8,9 @@
     <bean id="dt2" class="java.util.Date">
     	<property name="year" value="110"/>
     </bean>
-    
-<!--     test by giving case sensitive property name.
-    test by giving case sensitive constructor name. -->
-    
-   <!--  check whether two object creates or two threads create by two bean id of same class:
-     1) in case of setter injection
-     2) in case of constructor injection -->
+     
+     <bean id="a" class="com.nt.beans.WishMessageGenerator"/>
+     <bean id="b" class="com.nt.beans.WishMessageGenerator"/>
      
      <!-- testing of private constructor and private setter method -->
     
