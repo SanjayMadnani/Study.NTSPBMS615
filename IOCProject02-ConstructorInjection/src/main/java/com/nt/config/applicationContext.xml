@@ -5,7 +5,18 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dt" class="java.util.Date"/>
+    <bean id="dt2" class="java.util.Date">
+    	<property name="year" value="110"/>
+    </bean>
+     
+     <bean id="a" class="com.nt.beans.WishMessageGenerator"/>
+     <bean id="b" class="com.nt.beans.WishMessageGenerator"/>
+     
+     <!-- testing of private constructor and private setter method -->
+    
+    
     <bean id="wmg" class="com.nt.beans.WishMessageGenerator">
+    	<property name="date" ref="dt2"></property>
     	<constructor-arg name="date" ref="dt"></constructor-arg>
     </bean>
 
